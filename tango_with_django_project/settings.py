@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
 
 # Quick-start development settings - unsuitable for production
@@ -77,9 +78,20 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_DIRS = ('/home/abhishek/code/tango_with_django_project',)
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    TEMPLATE_PATH,
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_PATH = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Absolute path to the media directory
