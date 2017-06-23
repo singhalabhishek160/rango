@@ -7,7 +7,7 @@ from rango.models import UserProfile
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('name',)}
 class PageAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug':('title',)}    
+    prepopulated_fields = {'slug':('title',)}
 
 # Update the registeration to include this customised interface
 admin.site.register(Category, CategoryAdmin)

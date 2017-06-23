@@ -12,7 +12,7 @@ def populate():
     add_page(cat=python_cat,
         title="How to Think like a Computer Scientist",
         url="http://www.greenteapress.com/thinkpython/",
-        views=45)
+        # views=45)
 
     add_page(cat=python_cat,
         title="Learn Python in 10 Minutes",
